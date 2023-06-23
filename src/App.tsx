@@ -9,10 +9,10 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<LoginPage />}></Route>
-      <Route path='/login' element={<LoginPage />}></Route>
-      <Route path='/displayImage/:id' element={<DisplayImage />}></Route>
-      <Route path='/homePage' element={<PrivateRoute>
+      <Route path='/' exact element={<LoginPage />}></Route>
+      <Route path='/login' exact element={<LoginPage />}></Route>
+      <Route path='/displayImage/:id' exact element={<DisplayImage />}></Route>
+      <Route path='/homePage'  exact element={<PrivateRoute>
         <HomePage />
       </PrivateRoute>}></Route>
     </Routes>
